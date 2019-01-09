@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Film</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding>
+    <ion-item>
+        <ion-icon name="film" item-start></ion-icon>
+        Films les plus populaires      
+      </ion-item>
+
+      <!-- 
+  <ion-card *ngFor="let movie of tableau.results">
+    <ion-card-header>
+      <ion-card-title>{{movie.title}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>language: {{movie.original_language}}</ion-card-content>
+  </ion-card>-->
+  
+</ion-content>
+
+<!-- 
+  <ion-card *ngFor="let movie of tableau.results" > (click)="showDetails(news)"*/
+    <img [src]="https://image.tmdb.org/t/p/original{{movie.poster_path}}">
+  </ion-card>
+-->
