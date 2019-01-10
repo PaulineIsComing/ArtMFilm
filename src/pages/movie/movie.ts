@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {Movie} from '../../models/movie.model';
-import {ResponseMovie} from '../../models/responseMovie.model';
 import {HttpClient} from '@angular/common/http';
 
 
@@ -12,7 +11,6 @@ import {HttpClient} from '@angular/common/http';
 })
 export class MoviePage {
   
-  response:ResponseMovie;
   tableau:Movie[];
   img_path:String = "https://image.tmdb.org/t/p/original";
 
@@ -25,7 +23,6 @@ export class MoviePage {
         console.log(error);
       }
     )
-    this.tableau = this.tableau.;
   }
   
 
