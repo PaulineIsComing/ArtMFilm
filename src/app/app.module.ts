@@ -7,8 +7,8 @@ import { HomePage } from '../pages/home/home';
 import { ArtistePage } from '../pages/artiste/artiste';
 import { ContactPage } from '../pages/contact/contact';
 import { JobPage } from '../pages/job/job';
-import { MoviePage } from '../pages/movie/movie';
 import { MovieDetailsPage } from '../pages/movie-details/movie-details';
+import { MoviePage } from '../pages/movie/movie';
 
 
 
@@ -24,8 +24,9 @@ import {HttpClientModule} from "@angular/common/http";
     ArtistePage,
     ContactPage,
     JobPage,
-    MoviePage,
-    MovieDetailsPage
+    MovieDetailsPage,
+    MoviePage
+
 
   ],
   imports: [
@@ -40,8 +41,9 @@ import {HttpClientModule} from "@angular/common/http";
     ArtistePage,
     ContactPage,
     JobPage,
-    MoviePage,
-    MovieDetailsPage
+    MovieDetailsPage,
+    MoviePage
+
   ],
   providers: [
     StatusBar,

@@ -33,12 +33,15 @@ export class MovieDetailsPage {
     .subscribe(
       (result:MovieById)=>{
         this.movie = result;
+        console.log(this.movie);
       },
       (error)=>{
         console.log(error);
       }
     )
   }
+
+  
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad NewsDetailPage');
