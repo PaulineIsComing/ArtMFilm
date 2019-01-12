@@ -8,6 +8,8 @@ import { ArtistePage } from '../pages/artiste/artiste';
 import { ContactPage } from '../pages/contact/contact';
 import { JobPage } from '../pages/job/job';
 import { MoviePage } from '../pages/movie/movie';
+import { MovieDetailsPage } from '../pages/movie-details/movie-details';
+
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -22,7 +24,9 @@ import {HttpClientModule} from "@angular/common/http";
     ArtistePage,
     ContactPage,
     JobPage,
-    MoviePage
+    MoviePage,
+    MovieDetailsPage
+
   ],
   imports: [
     BrowserModule,
@@ -36,7 +40,8 @@ import {HttpClientModule} from "@angular/common/http";
     ArtistePage,
     ContactPage,
     JobPage,
-    MoviePage
+    MoviePage,
+    MovieDetailsPage
   ],
   providers: [
     StatusBar,
