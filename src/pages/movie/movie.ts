@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {Movie} from '../../models/movie.model';
 import {HttpClient} from '@angular/common/http';
+import {MovieDetailsPage} from "../movie-details/movie-details";
 
 
 @IonicPage()
@@ -23,6 +24,10 @@ export class MoviePage {
         console.log(error);
       }
     )
+  }
+
+  showDetails(id: number) { 
+    this.navCtrl.push(MovieDetailsPage, {id: id})
   }
   
 

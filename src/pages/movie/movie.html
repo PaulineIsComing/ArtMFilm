@@ -16,7 +16,7 @@
       </ion-item>
 
      
-  <ion-card *ngFor="let movie of tableau?.results">
+  <ion-card *ngFor="let movie of tableau?.results" (click)="showDetails(movie.id)"> 
     <ion-card-header>
       <ion-card-title>{{movie.title}}</ion-card-title>
     </ion-card-header>
@@ -25,7 +25,7 @@
 </ion-content>
 
 <!-- 
-  <ion-card *ngFor="let movie of tableau.results" > (click)="showDetails(news)"*/
+  <ion-card *ngFor="let movie of tableau.results" > (click)="showDetails(movie)"*/
     <img [src]="https://image.tmdb.org/t/p/original{{movie.poster_path}}">
   </ion-card>
 -->
