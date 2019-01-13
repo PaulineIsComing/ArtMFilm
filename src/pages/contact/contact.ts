@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 /**
  * Generated class for the ContactPage page.
@@ -15,7 +16,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ContactPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  objet: string;
+  message: string;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing) {
+
+  }
+
+  sendMessage() {
+    this.socialSharing.shareViaEmail(this.message, this.objet, 'Toagome@hotmail.fr');
+    this.objet = '';
+    this.message = '';
   }
 
   ionViewDidLoad() {

@@ -13,7 +13,13 @@
 </ion-header>
 
 
-<ion-content padding>
-  <ion-card>{{movie?.original_title}}</ion-card>
+<ion-content padding >
+  <ion-card>{{movie?.title}}</ion-card>
 
+  <div *ngIf='movie'>
+    <button ion-button color="primary" round (click)="createEventCalendar()">Fixer une date pour voir ce film</button>
+    <button class="ytButton" ion-button icon-only clear large (click)="openYoutubeTrailer()" *ngIf='videoId'>
+      <ion-icon name="logo-youtube"></ion-icon>
+    </button>
+  </div>
 </ion-content>

@@ -11,9 +11,11 @@ import { MovieDetailsPage } from '../pages/movie-details/movie-details';
 import { MoviePage } from '../pages/movie/movie';
 
 
-
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { SocialSharing } from '@ionic-native/social-sharing';
+import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
+import { Calendar } from '@ionic-native/calendar';
 import {HttpClientModule} from "@angular/common/http";
 
 
@@ -48,6 +50,9 @@ import {HttpClientModule} from "@angular/common/http";
   providers: [
     StatusBar,
     SplashScreen,
+    YoutubeVideoPlayer,
+    SocialSharing,
+    Calendar,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
