@@ -10,6 +10,8 @@ import { ContactPage } from '../pages/contact/contact';
 import { JobPage } from '../pages/job/job';
 import { MovieDetailsPage } from '../pages/movie-details/movie-details';
 import { MoviePage } from '../pages/movie/movie';
+import { JobDetailsPage } from '../pages/job-details/job-details';
+
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -29,7 +31,8 @@ import {HttpClientModule} from "@angular/common/http";
     ContactPage,
     JobPage,
     MovieDetailsPage,
-    MoviePage
+    MoviePage,
+    JobDetailsPage
 
 
   ],
@@ -47,7 +50,8 @@ import {HttpClientModule} from "@angular/common/http";
     ContactPage,
     JobPage,
     MovieDetailsPage,
-    MoviePage
+    MoviePage,
+    JobDetailsPage
 
   ],
   providers: [
