@@ -7,14 +7,24 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{id}}</ion-title>
+    <ion-title>{{movie?.title}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding >
-  <ion-card>{{movie?.title}}</ion-card>
+  <ion-card>
+    
+      <img src="https://image.tmdb.org/t/p/original{{movie?.poster_path}}" *ngIf='movie?.poster_path'>
+
+      <ion-card-content>
+        Titre original : {{movie?.original_title}} <br>
+        Date de sortie : {{movie?.release_date}} <br>
+        Durée : {{movie?.runtime}} minutes
+      </ion-card-content>
+      <ion-card-content>Synopsis :<br>{{movie?.overview}}</ion-card-content>
+    </ion-card>
 
   <div *ngIf='movie'>
     <button ion-button color="primary" round (click)="createEventCalendar()">Fixer une date pour voir ce film</button>
