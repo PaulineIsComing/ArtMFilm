@@ -24,7 +24,7 @@ export class ContactPage {
   }
 
   sendMessage() {
-    this.socialSharing.shareViaEmail(this.message, this.objet, 'Toagome@hotmail.fr');
+    this.socialSharing.shareViaEmail(this.message, this.objet, ['Toagome@hotmail.fr']);
     this.objet = '';
     this.message = '';
   }
