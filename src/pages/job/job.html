@@ -3,36 +3,23 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Métier</ion-title>
+    <ion-title><ion-icon name="videocam" item-start></ion-icon>    Catégories des métiers </ion-title>
   </ion-navbar>
 </ion-header>
 
 
 
 <ion-content padding>
-    <ion-item>
-        <ion-icon name="videocam" item-start></ion-icon>
-        Catégories de métiers du cinéma        
-      </ion-item>
 
       <img src="assets/imgs/CineMetier.jpg" alt="metiers">
 
       <ion-grid>
           <ion-row>
-            <ion-col *ngFor="let job of tableau" col-6>
-                <button ion-button color="dark" clear>
+            <ion-col *ngFor="let job of tableau" col-6 >
+                <button ion-button color="dark" clear (click)="showDetails(job)">
                   {{job.department}}
                 </button>
             </ion-col>
           </ion-row>
       </ion-grid>
 </ion-content>
-
-<!-- 
-  <ion-card *ngFor="let job of tableau">
-    <ion-card-header>
-      <ion-card-title>{{job.department}}</ion-card-title>
-    </ion-card-header>
-  </ion-card>
-</ion-content>
--->

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {HttpClient} from '@angular/common/http';
 import {Job} from '../../models/job.model';
+import {JobDetailsPage} from "../job-details/job-details";
 
 
 @IonicPage()
@@ -24,10 +25,13 @@ export class JobPage {
       }
     )
   }
-  
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad JobPage');
+  }
+
+  showDetails(job: Job) {
+    this.navCtrl.push(JobDetailsPage, {job: job})
   }
 
 }
