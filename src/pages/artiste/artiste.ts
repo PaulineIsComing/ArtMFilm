@@ -26,6 +26,7 @@ export class ArtistePage {
     )
   }
 
+  //affiche les détails d'un artiste dans une nouvelle page
   showDetails(id: number) {
     this.navCtrl.push(ArtisteDetailsPage, {id: id})
   }
