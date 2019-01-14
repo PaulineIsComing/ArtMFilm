@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {Artiste} from '../../models/artist.model';
+import {Artiste} from '../../models/artiste.model';
 import {HttpClient} from '@angular/common/http';
+import { ArtisteDetailsPage } from '../artiste-details/artiste-details';
 
 
 @IonicPage()
@@ -23,6 +24,10 @@ export class ArtistePage {
         console.log(error);
       }
     )
+  }
+
+  showDetails(id: number) {
+    this.navCtrl.push(ArtisteDetailsPage, {id: id})
   }
 
   ionViewDidLoad() {

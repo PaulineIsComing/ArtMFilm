@@ -10,21 +10,20 @@
 
 
 <ion-content padding>
-    <ion-item>
-        <ion-icon name="film" item-start></ion-icon>
-        Films les plus populaires      
-      </ion-item>
+  <ion-item>
+    <ion-icon name="film" item-start></ion-icon>
+    Films les plus populaires
+  </ion-item>
 
-     
-  <ion-card *ngFor="let movie of tableau?.results" (click)="showDetails(movie.id)"> 
-    <ion-card-header>
+
+  <ion-card *ngFor="let movie of tableau?.results" (click)="showDetails(movie.id)">
+    <img src="https://image.tmdb.org/t/p/w400{{movie?.poster_path}}"/>
       <ion-card-title>{{movie.title}}</ion-card-title>
-    </ion-card-header>
   </ion-card>
-  
+
 </ion-content>
 
-<!-- 
+<!--
   <ion-card *ngFor="let movie of tableau.results" > (click)="showDetails(movie)"*/
     <img [src]="https://image.tmdb.org/t/p/original{{movie.poster_path}}">
   </ion-card>
