@@ -3,21 +3,27 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Film</ion-title>
+    <ion-title><ion-icon name="film" item-start> </ion-icon>  Film</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 
 <ion-content padding>
-  <ion-item>
-    <ion-icon name="film" item-start></ion-icon>
-    Films les plus populaires
-  </ion-item>
 
+      <ion-item>
+          <ion-label fixed>Date</ion-label>
+          <ion-input type="text" [(ngModel)]="date"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>Titre</ion-label>
+          <ion-input type="text" [(ngModel)]="debut"></ion-input>
+        </ion-item>
+
+        <button ion-button block (click)="search()">Rechercher</button>
 
   <ion-card *ngFor="let movie of tableau?.results" (click)="showDetails(movie.id)">
-    <img src="https://image.tmdb.org/t/p/w400{{movie?.poster_path}}"/>
+      <img src="https://image.tmdb.org/t/p/w400{{movie?.poster_path}}">
       <ion-card-title>{{movie.title}}</ion-card-title>
   </ion-card>
 
