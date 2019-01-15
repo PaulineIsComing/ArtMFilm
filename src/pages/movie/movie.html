@@ -23,7 +23,7 @@
   <button ion-button block (click)="search()">Rechercher</button>
 
   <ion-card *ngFor="let movie of tableau?.results" (click)="showDetails(movie.id)">
-    <img src="https://image.tmdb.org/t/p/w400{{movie?.poster_path}}">
+    <img src="https://image.tmdb.org/t/p/w400{{movie.poster_path}}" *ngIf='movie?.poster_path'>
     <ion-card-title>{{movie.title}}</ion-card-title>
   </ion-card>
 

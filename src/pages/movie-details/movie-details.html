@@ -17,7 +17,7 @@
 
   <div *ngIf='movie'>
     <ion-card >
-      <img src="https://image.tmdb.org/t/p/original{{movie?.poster_path}}">
+      <img src="https://image.tmdb.org/t/p/original{{movie.poster_path}}" *ngIf='movie?.poster_path'>
       <ion-card-content>
         Titre original : {{movie?.original_title}} <br>
         Date de sortie : {{movie?.release_date}} <br>
