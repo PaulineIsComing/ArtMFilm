@@ -37,7 +37,7 @@ export class MoviePage {
 
   //effectue une de film requête par rapport aux champs du formulaire et affiche les résultats
   search(){
-    const url
+    var url;
     if(this.text == null || this.text.length == 0){
       url = `${this.basic_url}&year=${this.date}`;
     }
@@ -52,43 +52,6 @@ export class MoviePage {
         console.log(error);
       }
     )
-  }
-
-
-  search(){
-    if(this.date != null && this.text == null || this.text.length == 0){
-      const url = `${this.basic_url}&year=${this.date}`;
-      this.httpClient.get<Movie[]>(url).subscribe(
-        (result:Movie[])=>{
-          this.tableau = result;
-        },
-        (error)=>{
-          console.log(error);
-        }
-      )
-    }
-    if(this.date == null && this.text != null){
-      const url = `https://api.themoviedb.org/3/search/movie?api_key=a11c8337b79630d0217518e8f78dc5ad&language=fr&query=${this.text}`;
-      this.httpClient.get<Movie[]>(url).subscribe(
-        (result:Movie[])=>{
-          this.tableau = result;
-        },
-        (error)=>{
-          console.log(error);
-        }
-      )
-    }
-    else if(this.date != null && this.text != null){
-      const url = `https://api.themoviedb.org/3/search/movie?api_key=a11c8337b79630d0217518e8f78dc5ad&language=fr&query=${this.text}&year=${this.date}`;
-      this.httpClient.get<Movie[]>(url).subscribe(
-        (result:Movie[])=>{
-          this.tableau = result;
-        },
-        (error)=>{
-          console.log(error);
-        }
-      )
-    }
   }
 
   ionViewDidLoad() {
