@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Contact</ion-title>
+    <ion-title><ion-icon name="mail" item-start></ion-icon>   Contact</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -11,8 +11,7 @@
 <ion-content padding>
 
   <ion-item>
-    <ion-icon name="mail" item-start></ion-icon>
-    Contactez nous.
+    N'hésitez pas à nous contacter.
   </ion-item>
   <form (ngSubmit)="sendMessage()">
     <ion-item>

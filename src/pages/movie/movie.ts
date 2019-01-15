@@ -14,10 +14,10 @@ import {MovieDetailsPage} from "../movie-details/movie-details";
 export class MoviePage {
 
   date: number;
-  debut: String;
+  text: String;
   tableau: Movie[];
   img_path: String = "https://image.tmdb.org/t/p/original";
-  private basic_url = "https://api.themoviedb.org/3/discover/movie?api_key=a11c8337b79630d0217518e8f78dc5ad&language=FR&sort_by=popularity.desc&include_adult=false&include_video=false&page=1";
+  private basic_url = "https://api.themoviedb.org/3/discover/movie?api_key=a11c8337b79630d0217518e8f78dc5ad&language=fr&sort_by=popularity.desc&include_adult=false&include_video=false&page=1";
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private httpClient:HttpClient) {
     this.httpClient.get<Movie[]>(this.basic_url).subscribe(
@@ -35,7 +35,7 @@ export class MoviePage {
   }
 
   search(){
-    if(this.date != null && this.debut == null){
+    if(this.date != null && this.text == null || this.text.length == 0){
       const url = `${this.basic_url}&year=${this.date}`;
       this.httpClient.get<Movie[]>(url).subscribe(
         (result:Movie[])=>{
@@ -46,8 +46,8 @@ export class MoviePage {
         }
       )
     }
-    if(this.date == null && this.debut != null){
-      const url = `https://api.themoviedb.org/3/search/movie?api_key=a11c8337b79630d0217518e8f78dc5ad&language=fr&query=${this.debut}`;
+    if(this.date == null && this.text != null){
+      const url = `https://api.themoviedb.org/3/search/movie?api_key=a11c8337b79630d0217518e8f78dc5ad&language=fr&query=${this.text}`;
       this.httpClient.get<Movie[]>(url).subscribe(
         (result:Movie[])=>{
           this.tableau = result;
@@ -57,8 +57,8 @@ export class MoviePage {
         }
       )
     }
-    if(this.date != null && this.debut != null){
-      const url = `https://api.themoviedb.org/3/search/movie?api_key=a11c8337b79630d0217518e8f78dc5ad&language=fr&query=${this.debut}&year=${this.date}`;
+    else if(this.date != null && this.text != null){
+      const url = `https://api.themoviedb.org/3/search/movie?api_key=a11c8337b79630d0217518e8f78dc5ad&language=fr&query=${this.text}&year=${this.date}`;
       this.httpClient.get<Movie[]>(url).subscribe(
         (result:Movie[])=>{
           this.tableau = result;

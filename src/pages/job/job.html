@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title><ion-icon name="videocam" item-start></ion-icon>    Catégories des métiers </ion-title>
+    <ion-title><ion-icon name="videocam" item-start></ion-icon>    Métiers </ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -15,7 +15,7 @@
 
       <ion-grid>
           <ion-row>
-            <ion-col *ngFor="let job of tableau" col-6 >
+            <ion-col *ngFor="let job of tableau" col-6>
                 <button ion-button color="dark" clear (click)="showDetails(job)">
                   {{job.department}}
                 </button>

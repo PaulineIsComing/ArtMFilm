@@ -3,18 +3,13 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Artiste</ion-title>
+    <ion-title><ion-icon name="people" item-start></ion-icon>   Artiste</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 
 <ion-content padding>
-  <ion-item>
-    <ion-icon name="people" item-start></ion-icon>
-    Artistes du cinéma
-  </ion-item>
-
   <ion-card *ngFor="let artiste of tableau?.results" (click)="showDetails(artiste.id)">
     <ion-card-header>
       <ion-card-title>{{artiste.name}}</ion-card-title>

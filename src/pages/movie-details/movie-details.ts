@@ -76,7 +76,7 @@ export class MovieDetailsPage {
   //ouvre l'application calendrier du téléphone pour créer un événement
   createEventCalendar() {
     this.calendar.requestReadWritePermission();
-    this.calendar.createEventInteractively("voir "+this.movie.title, null, null, new Date());
+    this.calendar.createEventInteractively("Film: "+this.movie.title, null, null, new Date());
   }
 
   //ouvre le trailer dans l'application youtube du téléphone

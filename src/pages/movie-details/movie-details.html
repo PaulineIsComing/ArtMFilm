@@ -19,13 +19,14 @@
     <ion-card-content>
       Titre original : {{movie?.original_title}} <br>
       Date de sortie : {{movie?.release_date}} <br>
-      Durée : {{movie?.runtime}} minutes
+      Durée : {{movie?.runtime}} minutes<br><br>
+      Avis global : {{movie?.vote_average}} / 10<br>
     </ion-card-content>
-    <ion-card-content>Synopsis :<br>{{movie?.overview}}</ion-card-content>
+    <ion-card-content *ngIf='movie?.overview'>Synopsis :<br>{{movie?.overview}}</ion-card-content>
   </ion-card>
 
   <div *ngIf='movie'>
-    <button ion-button color="primary" round (click)="createEventCalendar()">Fixer une date pour voir ce film</button>
+    <button ion-button color="primary" round (click)="createEventCalendar()">Associer une date à ce film</button>
     <button class="ytButton" ion-button icon-only clear large (click)="openYoutubeTrailer()" *ngIf='videoId'>
       <ion-icon name="logo-youtube"></ion-icon>
     </button>

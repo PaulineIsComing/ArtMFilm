@@ -3,16 +3,21 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title><ion-icon name="home" item-start></ion-icon>   Accueil</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class="card-background-page">
+    
+
+        <ion-card class="card-background-page">
+          <img src="assets/imgs/cinema.png"/>
+          <div class="card-title">Bienvenue</div>
+          <div class="card-subtitle">Artiste, Métier, Film</div>
+        </ion-card>
+
     <ion-card>
-        <ion-card-header>
-          <ion-card-title>Bienvenue</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>Bienvenue sur notre application "ArtMFilm", car l'Art aime les films, et cela correspond au début d'Artiste, Métier et Film.
+         <ion-card-content>Bienvenue sur notre application "ArtMFilm", car l'Art aime les films, et cela correspond au début d'Artiste, Métier et Film.
             <br/> <br/> 
             Vous pouvez accéder à une sélection d'artiste, de métiers du cinéma ou de films.</ion-card-content>
       </ion-card>
@@ -30,5 +35,5 @@
 
 
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <button ion-button secondary menuToggle>Vers le menu</button>
 </ion-content>
