@@ -26,12 +26,13 @@ export class JobPage {
     )
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad JobPage');
-  }
-
+  //affiche les détails d'un métier dans une nouvelle page
   showDetails(job: Job) {
     this.navCtrl.push(JobDetailsPage, {job: job})
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad JobPage');
   }
 
 }

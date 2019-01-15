@@ -23,8 +23,9 @@ export class ContactPage {
 
   }
 
+  //crée un nouveau mail dans une application du téléphone
   sendMessage() {
-    this.socialSharing.shareViaEmail(this.message, this.objet, ['Toagome@hotmail.fr']);
+    this.socialSharing.shareViaEmail(this.message, this.objet, ['film@example.com']);
     this.objet = '';
     this.message = '';
   }

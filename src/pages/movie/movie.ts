@@ -30,10 +30,12 @@ export class MoviePage {
     )
   }
 
+  //affiche les détails d'un film dans une nouvelle page
   showDetails(id: number) {
     this.navCtrl.push(MovieDetailsPage, {id: id})
   }
 
+  //effectue une de film requête par rapport aux champs du formulaire et affiche les résultats
   search(){
     if(this.date != null && this.text == null || this.text.length == 0){
       const url = `${this.basic_url}&year=${this.date}`;
@@ -68,7 +70,6 @@ export class MoviePage {
         }
       )
     }
-    
   }
 
   ionViewDidLoad() {

@@ -13,7 +13,7 @@ import { ArtisteDetailsPage } from '../artiste-details/artiste-details';
 export class ArtistePage {
 
   tableau:Artiste[];
-  img_path:String = "https://image.tmdb.org/t/p/original";
+  img_path:String = 'https://image.tmdb.org/t/p/original';
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private httpClient:HttpClient) {
     this.httpClient.get<Artiste[]>('https://api.themoviedb.org/3/person/popular?api_key=a11c8337b79630d0217518e8f78dc5ad&language=en-US&page=1').subscribe(

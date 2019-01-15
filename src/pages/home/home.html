@@ -7,33 +7,32 @@
   </ion-navbar>
 </ion-header>
 
+
 <ion-content padding class="card-background-page">
-    
 
-        <ion-card class="card-background-page">
-          <img src="assets/imgs/cinema.png"/>
-          <div class="card-title">Bienvenue</div>
-          <div class="card-subtitle">Artiste, Métier, Film</div>
-        </ion-card>
+  <ion-card class="card-background-page">
+    <img src="assets/imgs/cinema.png"/>
+    <div class="card-title">Bienvenue</div>
+    <div class="card-subtitle">Artiste, Métier, Film</div>
+  </ion-card>
 
-    <ion-card>
-         <ion-card-content>Bienvenue sur notre application "ArtMFilm", car l'Art aime les films, et cela correspond au début d'Artiste, Métier et Film.
-            <br/> <br/> 
-            Vous pouvez accéder à une sélection d'artiste, de métiers du cinéma ou de films.</ion-card-content>
-      </ion-card>
-  
- 
+  <ion-card>
+    <ion-card-content>
+      Bienvenue sur notre application "ArtMFilm", car l'Art aime les films, et cela correspond au début d'Artiste, Métier et Film.
+      <br><br>
+      Vous pouvez accéder à une sélection d'artiste, de métiers du cinéma ou de films.
+    </ion-card-content>
+  </ion-card>
 
-    <button ion-button color="secondary" round (click)="showMessage()" *ngIf="!isMessageVisible">Info sur l'API utilisée</button>
+  <button ion-button color="secondary" round (click)="showMessage()" *ngIf="!isMessageVisible">Info sur l'API utilisée</button>
 
-    <ion-card *ngIf="isMessageVisible">
-      L'API utilisée est "<a href="https://www.themoviedb.org">The Movie Database (TMDb)</a>", c'est une base de donnée communautaire recensant des films, des séries et des artistes.
-      <br/>
-      <button ion-button color="secondary" round (click)="isMessageVisible = false">Cacher les détails</button>
-    </ion-card>
-
-
-
+  <ion-card *ngIf="isMessageVisible">
+    L'API utilisée est "<a href="https://www.themoviedb.org">The Movie Database (TMDb)</a>"
+    , c'est une base de donnée communautaire recensant des films, des séries et des artistes.
+    <br/>
+    <button ion-button color="secondary" round (click)="isMessageVisible = false">Cacher les détails</button>
+  </ion-card>
 
   <button ion-button secondary menuToggle>Vers le menu</button>
+
 </ion-content>

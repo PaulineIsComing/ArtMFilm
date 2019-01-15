@@ -8,18 +8,17 @@
 </ion-header>
 
 
-
 <ion-content padding>
 
-      <img src="assets/imgs/CineMetier.jpg" alt="metiers">
+  <img src="assets/imgs/CineMetier.jpg" alt="metiers">
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let job of tableau" col-6>
+        <button ion-button color="dark" clear (click)="showDetails(job)">
+          {{job.department}}
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-      <ion-grid>
-          <ion-row>
-            <ion-col *ngFor="let job of tableau" col-6>
-                <button ion-button color="dark" clear (click)="showDetails(job)">
-                  {{job.department}}
-                </button>
-            </ion-col>
-          </ion-row>
-      </ion-grid>
 </ion-content>

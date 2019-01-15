@@ -10,9 +10,11 @@
 
 
 <ion-content padding>
+
   <ion-card *ngFor="let artiste of tableau?.results" (click)="showDetails(artiste.id)">
     <ion-card-header>
       <ion-card-title>{{artiste.name}}</ion-card-title>
     </ion-card-header>
   </ion-card>
+  
 </ion-content>
