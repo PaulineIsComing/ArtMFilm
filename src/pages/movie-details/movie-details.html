@@ -13,20 +13,20 @@
 </ion-header>
 
 
-<ion-content padding>
-
-  <ion-card>
-    <img src="https://image.tmdb.org/t/p/original{{movie?.poster_path}}" *ngIf='movie?.poster_path'>
-    <ion-card-content>
-      Titre original : {{movie?.original_title}} <br>
-      Date de sortie : {{movie?.release_date}} <br>
-      Durée : {{movie?.runtime}} minutes<br><br>
-      Avis global : {{movie?.vote_average}} / 10<br>
-    </ion-card-content>
-    <ion-card-content *ngIf='movie?.overview'>Synopsis :<br>{{movie?.overview}}</ion-card-content>
-  </ion-card>
+<ion-content padding >
 
   <div *ngIf='movie'>
+    <ion-card >
+      <img src="https://image.tmdb.org/t/p/original{{movie?.poster_path}}">
+      <ion-card-content>
+        Titre original : {{movie?.original_title}} <br>
+        Date de sortie : {{movie?.release_date}} <br>
+        Durée : {{movie?.runtime}} minutes<br><br>
+        Avis global : {{movie?.vote_average}} / 10<br>
+      </ion-card-content>
+      <ion-card-content *ngIf='movie?.overview'>Synopsis :<br>{{movie?.overview}}</ion-card-content>
+    </ion-card>
+
     <button ion-button color="primary" round (click)="createEventCalendar()">Associer une date à ce film</button>
     <button class="ytButton" ion-button icon-only clear large (click)="openYoutubeTrailer()" *ngIf='videoId'>
       <ion-icon name="logo-youtube"></ion-icon>

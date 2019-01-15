@@ -15,15 +15,15 @@
 
 <ion-content padding>
 
-  <ion-card>
+  <ion-card *ngIf='artiste'>
     <img src="https://image.tmdb.org/t/p/w400{{artiste.profile_path}}" *ngIf='artiste?.profile_path'>
     <ion-card-content>
       Date de naissance : {{artiste?.birthday}} <br>
       Lieu de naissance : {{artiste?.place_of_birth}} <br>
     </ion-card-content>
-    <ion-card-content *ngIf='artiste?.biography'>
+    <ion-card-content>
       Biographie : <br> {{artiste?.biography}}
     </ion-card-content>
   </ion-card>
-  
+
 </ion-content>

@@ -1,5 +1,3 @@
-import {Movie} from '../models/movie.model';
-
 export class Artiste{
   birthday: string;
   known_for_department: string;
