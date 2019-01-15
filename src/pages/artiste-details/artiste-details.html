@@ -21,7 +21,7 @@
       Date de naissance : {{artiste?.birthday}} <br>
       Lieu de naissance : {{artiste?.place_of_birth}} <br>
     </ion-card-content>
-    <ion-card-content>
+    <ion-card-content *ngIf='artiste?.biography'>
       Biographie : <br> {{artiste?.biography}}
     </ion-card-content>
   </ion-card>
